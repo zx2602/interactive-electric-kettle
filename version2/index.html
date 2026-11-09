@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Version 2 — Electric Kettle Logic Revision</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Version 2 — Electric Kettle Logic Revision</h1>
+    <p>Press a control to change the kettle’s state.</p>
+
+    <section aria-labelledby="state-heading">
+      <h2 id="state-heading">Current state</h2>
+      <div class="state-display" role="status" aria-live="polite" aria-atomic="true">
+        <p>Lid: <strong id="lid-display">Closed</strong></p>
+        <p>Current Temperature: <strong id="temperature-display">20°C</strong></p>
+        <p>Target Temperature: <strong id="target-display">70°C</strong></p>
+        <p>Status: <strong id="heating-display">Stopped</strong></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="controls-heading">
+      <h2 id="controls-heading">Control panel</h2>
+      <div class="controls">
+        <button id="open-button" type="button">OPEN</button>
+        <button id="boil-button" type="button">BOIL</button>
+        <button id="set-temp-button" type="button">SET TEMP</button>
+        <button id="start-stop-button" type="button">START</button>
+      </div>
+    </section>
+    <section aria-labelledby="physical-action-heading">
+      <h2 id="physical-action-heading">Simulated physical action</h2>
+      <p class="note">On the real kettle, you push the lid down by hand.</p>
+      <button id="close-lid-button" type="button">Close Lid Manually</button>
+    </section>
+    <p class="note">Temperature rises by 1°C every 100 milliseconds during heating. At the target, the increase ends; press STOP to leave the Heating state.</p>
+  </main>
+</body>
+</html>
